@@ -76,10 +76,12 @@ const Inputs = ({ setQuery, setUnits }) => {
     };
 
     return (
-        <div className="flex flex-col justify-center my-6 md:flex-row md:space-x-4">
-            <div className="flex flex-row items-center w-full mb-4 md:w-3/4 md:mb-0">
-                {/* Container for input and icons */}
-                <div className="flex items-center w-full space-x-2">
+        // flex flex-row justify-center mx-20 my-6 md:flex-row
+        // flex justify-center w-1/2 px-9
+        <div className="flex flex-row">
+            <div className="w-full mb-4 md:mb-0">
+                <div className="flex justify-center px-12 ml-8 ">
+                    {/* Container for input and icons */}
                     {/* Input field */}
                     <input
                         value={city}
@@ -87,39 +89,38 @@ const Inputs = ({ setQuery, setUnits }) => {
                         onKeyDown={handleKeyDown}
                         type="text"
                         placeholder="Search by city..."
-                        className="flex-grow p-3 text-xl font-light text-gray-700 capitalize transition duration-300 bg-white border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder:lowercase md:text-base md:p-2 "
+                        className="flex-grow p-2 text-xl font-light text-gray-700 capitalize transition duration-300 bg-white border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder:lowercase md:text-base"
                     />
                     {/* Search icon */}
                     <BiSearch
                         size={24} // Adjust size for better fit
-                        className="text-blue-500 transition-transform duration-300 ease-out cursor-pointer hover:scale-125 md:hidden"
+                        className="mt-3 ml-2 transition-transform duration-300 ease-out cursor-pointer hover:scale-125"
                         onClick={handleSearch}
                     />
                     {/* Location icon */}
                     <BiCurrentLocation
                         size={24} // Adjust size for better fit
-                        className="text-blue-500 transition-transform duration-300 ease-out cursor-pointer md:hidden"
+                        className="mt-3 transition-transform duration-300 ease-out cursor-pointer ml-2text-blue-500"
                         onClick={handleLocationClick}
                     />
                 </div>
             </div>
-
-            <div className="flex flex-row items-center justify-center w-full space-x-2 md:w-1/4">
+            <div className="flex flex-row ">
                 <button
-                    className="text-lg font-medium transition-transform duration-300 ease-out md:text-2xl hover:scale-125"
+                    className="px-2 text-lg font-medium transition-transform duration-300 ease-out md:text-2xl hover:scale-125"
                     onClick={() => setUnits("metric")}
                 >
                     °C
                 </button>
-                <p className="text-lg font-medium md:text-xl">|</p>
+                <p className="mt-1 text-lg font-medium md:text-xl">|</p>
                 <button
-                    className="text-lg font-medium transition-transform duration-300 ease-out md:text-2xl hover:scale-125"
+                    className="pl-2 text-lg font-medium transition-transform duration-300 ease-out md:text-2xl hover:scale-125"
                     onClick={() => setUnits("imperial")}
                 >
                     °F
                 </button>
             </div>
-        </div>
+        </div >
     );
 };
 

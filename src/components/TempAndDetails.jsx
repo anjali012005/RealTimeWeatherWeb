@@ -69,16 +69,16 @@ const TempAndDetails = ({ weather: {
                 <p>{details}</p>
             </div>
 
-            <div className="flex flex-col items-center justify-between py-3 space-y-6 md:flex-row md:space-y-0">
+            <div className="flex items-center justify-around py-3 md:flex-row md:space-y-0">
                 <img src={icon} alt="weather icon" className="w-20 md:w-24"></img>
 
                 <p className="text-5xl">{`${temp.toFixed()}°`}</p>
 
-                <div className="flex flex-col items-start space-y-3">
+                <div className="flex flex-col items-start gap-1 space-y-3">
 
                     {
                         verticalDetails.map(({ id, Icon, title, value }) => (
-                            <div key={id} className="flex items-center justify-center text-sm font-light">
+                            <div key={id} className="flex items-center justify-center font-light ">
                                 <Icon size={18} className="mr-1" /> {`${title}:`}
                                 <span className="ml-1 font-medium">{value}</span>
                             </div>

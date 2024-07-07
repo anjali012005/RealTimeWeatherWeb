@@ -13,7 +13,7 @@ const Forecast = ({ title, data }) => {
                 <div key={index} className="flex flex-col items-center justify-center">
                     <p className="text-lg font-light sm:text-xl">{d.title} </p>
                     <img src={d.icon} alt="weather icon" className="w-12 my-1" />
-                    <p className="text-base font-medium sm:text-lg">{`${d.temp.toFixed()}°`}</p>
+                    <p className="text-base font-medium sm:text-lg ">{`${d.temp.toFixed()}°`}</p>
                 </div>
             ))}
 
